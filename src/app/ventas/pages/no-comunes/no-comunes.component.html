@@ -1,0 +1,25 @@
+<div>
+  <h1>Pipes no tan comunes pero utiles</h1>
+  <p>Pipes...</p>
+</div>
+
+<div class="grid">
+  <div class="col md-6">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      <p class="m-0">
+        Saludos {{ nombre }}, es un placer
+        {{ genero | i18nSelect : invitacionMap }}
+        a nuestro evento.
+      </p>
+      <p-button styleClass="p-button-secondary mt-5" (onClick)="cambiarNombre()">Cambiar nombre</p-button>
+    </p-fieldset>
+  </div>
+  <div class="col md-6">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p class="m-0">
+        Actualmente {{ clientes.length | i18nPlural : clientesMapa }}
+      </p>
+      <p-button styleClass="p-button-danger mt-5" (onClick)="eliminarCliente()">Eliminar cliente</p-button>
+    </p-fieldset>
+  </div>
+</div>
