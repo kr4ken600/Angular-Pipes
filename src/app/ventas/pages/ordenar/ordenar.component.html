@@ -57,10 +57,7 @@
         </div>
       </p-toolbar>
 
-      <p-table
-        [value]="heroes | ordenar : order"
-        [tableStyle]="{ 'min-width': '50rem' }"
-      >
+      <p-table [value]="heroes | ordenar : order">
         <ng-template pTemplate="header">
           <tr>
             <th>Nombre</th>
@@ -83,7 +80,7 @@
 <div class="grid">
   <div class="col">
     <p-fieldset legend="Tabla Sort" [toggleable]="true">
-      <p-table [value]="heroes | slice:0" [tableStyle]="{ 'min-width': '60rem' }">
+      <p-table [value]="heroes | slice : 0">
         <ng-template pTemplate="header">
           <tr>
             <th pSortableColumn="nombre" style="width: 20%">
