@@ -4,19 +4,19 @@
 </div>
 
 <div class="grid">
-  <div class="col-4">
+  <div class="col-12 md:col-4">
     <p-card header="UpperCase" [subheader]="nombreLower">
       {{ nombreLower | uppercase }}
       <p>Example: var | uppercase</p>
     </p-card>
   </div>
-  <div class="col-4">
+  <div class="col-12 md:col-4">
     <p-card header="LowerCase" [subheader]="nombreUpper">
       {{ nombreUpper | lowercase }}
       <p>Example: var | lowercase</p>
     </p-card>
   </div>
-  <div class="col-4">
+  <div class="col-12 md:col-4">
     <p-card header="TitleCase" [subheader]="nombreCompleto">
       {{ nombreCompleto | titlecase }}
       <p>Example: var | titlecase</p>
@@ -30,7 +30,7 @@
 </div>
 
 <div class="grid">
-  <div class="col-6">
+  <div class="col-12 md:col-6">
     <p-card header="Expample">
       <ul>
         <li>fecha</li>
@@ -46,7 +46,7 @@
       </ul>
     </p-card>
   </div>
-  <div class="col-6">
+  <div class="col-12 md:col-6">
     <p-card header="Result">
       <ul>
         <li>{{ fecha }}</li>
