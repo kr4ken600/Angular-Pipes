@@ -4,7 +4,7 @@
 </div>
 
 <div class="grid">
-  <div class="col md-6">
+  <div class="col md:col-6">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
       <p class="m-0">
         Saludos {{ nombre }}, es un placer
@@ -14,12 +14,45 @@
       <p-button styleClass="p-button-secondary mt-5" (onClick)="cambiarNombre()">Cambiar nombre</p-button>
     </p-fieldset>
   </div>
-  <div class="col md-6">
+  <div class="col md:col-6">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
       <p class="m-0">
         Actualmente {{ clientes.length | i18nPlural : clientesMapa }}
       </p>
       <p-button styleClass="p-button-danger mt-5" (onClick)="eliminarCliente()">Eliminar cliente</p-button>
+    </p-fieldset>
+  </div>
+  <div class="col md:col-6">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+      <p class="m-0">
+        <b>Original</b>
+      </p>
+      <p class="m-0">
+        {{clientes}}
+      </p>
+      <p class="m-0">
+        Slice
+      </p>
+      <p class="m-0">
+        {{clientes | slice:0}}
+      </p>
+    </p-fieldset>
+  </div>
+  <div class="col md:col-6">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <b>Contador</b>
+      <p class="m-0">
+        {{miObservable | async}}
+      </p>
+      
+      <b>Data</b>
+      <p class="m-0" *ngIf="!(valorPromesa | async)">
+        Cargando...
+      </p>
+      <p class="m-0">
+        {{valorPromesa | async}}
+      </p>
+      
     </p-fieldset>
   </div>
 </div>

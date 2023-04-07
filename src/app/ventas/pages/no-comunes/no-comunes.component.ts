@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -25,6 +26,14 @@ export class NoComunesComponent {
     '=3': 'tenemos 3 clientes esperando.',
     other: 'tenemos muchos clientes esperando.',
   };
+
+  miObservable = interval(1000);
+
+  valorPromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Tenemos data de la promesa');
+    }, 3500);
+  });
 
   cambiarNombre() {
     if (this.genero === 'masculino') {
